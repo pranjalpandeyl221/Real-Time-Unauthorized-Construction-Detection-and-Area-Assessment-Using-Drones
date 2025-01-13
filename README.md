@@ -1,46 +1,37 @@
-Real-Time Unauthorized Construction Detection and Area Assessment Using Drones
+<h1>Real-Time Unauthorized Construction Detection and Area Assessment Using Drones</h1>
 Overview
-This project leverages cutting-edge Mask R-CNN for segmenting unauthorized construction areas from drone-captured images and calculating their areas using Geospatial Data Integration (GDI) techniques. Additionally, Time-of-Flight (ToF) sensors are utilized in a second phase to assess depth and validate volumetric details.
+This project utilizes Mask R-CNN for detecting and segmenting unauthorized construction areas from drone images and calculates their areas using Geospatial Data Integration (GDI). Additionally, Time-of-Flight (ToF) sensors are used to validate the depth and volume of the detected structures.
 
-📹 Demo Video: Watch the Project in Action
+📹 Watch the Project Demo on YouTube
 
 How It Works
 1. Detection and Segmentation Using Mask R-CNN
-Mask R-CNN Architecture:
-The Mask R-CNN model is trained on a custom dataset of drone images to accurately segment areas of unauthorized construction.
+The project employs the Mask R-CNN model trained on a custom dataset of drone images to segment areas of unauthorized construction.
 
-Input: Drone images captured in real-time.
-Output: Binary masks highlighting the segmented construction areas.
 Steps for Area Detection:
-
 The segmented regions are extracted as binary masks.
-These masks are overlaid on georeferenced maps to associate the segmented regions with spatial coordinates.
-Using Geospatial Data Integration (GDI) tools, the pixel area of the mask is converted into real-world units (e.g., square meters).
-<br>
+These masks are georeferenced to associate them with real-world spatial coordinates.
+Using Geospatial Data Integration (GDI) tools, the pixel area of the mask is converted into real-world units, such as square meters.
 2. Validation with Time-of-Flight (ToF) Sensors
-ToF Sensor Integration:
-ToF sensors are deployed to measure the depth of structures and estimate volumetric details.
-Depth Calculation: Provides an additional dimension of analysis by measuring the height of unauthorized structures.
-This validation step ensures accuracy in detecting discrepancies between approved and unauthorized construction volumes.
-<br>
+The ToF sensors are employed to measure the depth and assess the volumetric details of unauthorized constructions.
+
+Steps for Validation:
+Depth Analysis: Accurately measures the height of structures.
+This additional step ensures reliable volumetric calculations and compliance validation.
 Features
-Real-Time Detection: Utilizes drone feeds for instant segmentation.
-High Accuracy: Employs the robust Mask R-CNN model for precise area segmentation.
-Spatial Analysis: Converts segmented masks into real-world measurements with geospatial tools.
-Volumetric Assessment: Enhances detection accuracy with ToF sensor-based depth analysis.
-<br>
+Real-Time Detection: Processes drone images instantly for unauthorized construction segmentation.
+High Accuracy: Leverages Mask R-CNN for precise segmentation.
+Area Calculation: Converts segmented regions into real-world measurements using geospatial tools.
+Volumetric Validation: Uses ToF sensors for depth analysis, enhancing detection accuracy.
 Requirements
-Hardware:
-
-Drone equipped with a high-resolution camera.
-Time-of-Flight (ToF) sensors for depth validation.
-Software:
-
+Hardware
+A drone equipped with a high-resolution camera.
+Time-of-Flight (ToF) sensors for depth measurement.
+Software
 Python
 TensorFlow
 OpenCV
-Geospatial Data Integration Tools (e.g., QGIS, GDAL)
-<br>
+Geospatial tools such as QGIS or GDAL
 Installation
 bash
 Copy code
@@ -52,29 +43,27 @@ cd Real-Time-Unauthorized-Construction-Detection-and-Area-Assessment-Using-Drone
 
 # Install dependencies  
 pip install -r requirements.txt  
-<br>
 Usage
-Prepare Drone Images:
-Capture drone images of the area to be analyzed.
+Capture Drone Images:
+Capture high-resolution drone images of the area of interest.
 
-Run the Segmentation Model:
+Run Segmentation Model:
 
 bash
 Copy code
 python segment_area.py --input drone_image.jpg --output mask_output.jpg  
 Calculate Area:
-Use the geospatial integration tools provided in the repository to convert the segmented masks into real-world units.
+Use the geospatial integration tools in the repository to convert the segmented binary masks into real-world area measurements.
 
-ToF Depth Analysis (Optional):
-Deploy the ToF module to validate the depth and volumetric data.
+ToF Depth Analysis:
+Deploy the ToF module to validate volumetric details of unauthorized constructions.
 
-<br>
 Applications
-Monitoring unauthorized construction in real estate or urban planning.
-Ensuring compliance with building regulations.
-Efficient land management and resource allocation.
-<br>
+Real-time monitoring of unauthorized construction in urban and rural areas.
+Compliance checks for building regulations.
+Land management and resource planning.
 Demo
-📹 Watch the Project Demo
+📹 Watch the Project Demo on YouTube
 
-<br>
+Contributing
+We welcome contributions to improve this project. Feel free to create a pull request or report issues in the repository.
