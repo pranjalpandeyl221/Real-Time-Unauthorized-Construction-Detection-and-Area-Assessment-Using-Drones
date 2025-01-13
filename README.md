@@ -2,7 +2,7 @@
 Overview
 This project utilizes Mask R-CNN for detecting and segmenting unauthorized construction areas from drone images and calculates their areas using Geospatial Data Integration (GDI). Additionally, Time-of-Flight (ToF) sensors are used to validate the depth and volume of the detected structures.
 
- <a href=" <a href="https://youtu.be/7WgU7KTvziM?si=r9oevuY64mlqoJZm" target="_blank">Watch the Project Demo on YouTube</a>
+ " <a href="https://youtu.be/7WgU7KTvziM?si=r9oevuY64mlqoJZm" target="_blank">Watch the Project Demo on YouTube</a>
 
 How It Works
 1. Detection and Segmentation Using Mask R-CNN
