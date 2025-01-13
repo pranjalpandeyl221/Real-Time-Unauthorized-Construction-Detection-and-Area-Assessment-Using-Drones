@@ -12,6 +12,7 @@ Steps for Area Detection:
 The segmented regions are extracted as binary masks.
 These masks are georeferenced to associate them with real-world spatial coordinates.
 Using Geospatial Data Integration (GDI) tools, the pixel area of the mask is converted into real-world units, such as square meters.
+
 2. Validation with Time-of-Flight (ToF) Sensors
 The ToF sensors are employed to measure the depth and assess the volumetric details of unauthorized constructions.
 
@@ -41,23 +42,6 @@ git clone https://github.com/pranjalpandeyl221/Real-Time-Unauthorized-Constructi
 # Navigate to the directory  
 cd Real-Time-Unauthorized-Construction-Detection-and-Area-Assessment-Using-Drones  
 
-# Install dependencies  
-pip install -r requirements.txt  
-Usage
-Capture Drone Images:
-Capture high-resolution drone images of the area of interest.
-
-Run Segmentation Model:
-
-bash
-Copy code
-python segment_area.py --input drone_image.jpg --output mask_output.jpg  
-Calculate Area:
-Use the geospatial integration tools in the repository to convert the segmented binary masks into real-world area measurements.
-
-ToF Depth Analysis:
-Deploy the ToF module to validate volumetric details of unauthorized constructions.
-
 Applications
 Real-time monitoring of unauthorized construction in urban and rural areas.
 Compliance checks for building regulations.
@@ -65,5 +49,3 @@ Land management and resource planning.
 Demo
 📹 Watch the Project Demo on YouTube
 
-Contributing
-We welcome contributions to improve this project. Feel free to create a pull request or report issues in the repository.
